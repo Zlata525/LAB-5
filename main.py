@@ -1,7 +1,10 @@
 import math
+def x(z):
+    return lambda: z ** 2 + 3
+def y():
+    return lambda: math.sin(4)
+def f(x, y):
+    print(x()+y())
 
-x = lambda z: z**2 + 3
-y = lambda: math.sin(4)
-function = lambda x, y: x + y
-
-print(function(x(int(input())), y()))
+z = int(input())
+f(x(z), y())
